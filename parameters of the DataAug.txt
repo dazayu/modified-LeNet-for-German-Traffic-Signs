@@ -1,0 +1,16 @@
+translation
+	xPixel = np.random.randint(-5,6,dtype='int8')
+	yPixel = np.random.randint(-5,6,dtype='int8')
+rotation
+	angle=np.random.randint(-30,31)
+noise
+	noise = np.random.randint(0,300,size=sizeOfIn)
+	noise = 0 * (noise<299) + 255 * (noise==299) 
+intensity
+	np.random.randint(100,180) 
+Blur
+	GaussianBlur(sigma=(0,1.0))*
+GammaContrast
+	GammaContrast(np.random.uniform(0.5,2))*
+
+the library of items with * is imgaug

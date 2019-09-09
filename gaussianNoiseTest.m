@@ -1,0 +1,17 @@
+load('TrainOri.mat')
+i=squeeze(images(105,:,:,:));
+j=imnoise(i,'gaussian');
+j1=imnoise(i,'gaussian',0,0.05);
+j2=imnoise(i,'gaussian',0,0.2);
+figure(1)
+subplot(2,2,1);
+imshow(i);
+xlabel('original');
+subplot(2,2,2);
+imshow(j1);
+xlabel('0.05');
+subplot(2,2,3);
+imshow(j);
+xlabel('\default');
+subplot(2,2,4),imshow(j2);
+xlabel('0.2');
